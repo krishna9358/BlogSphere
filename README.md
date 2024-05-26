@@ -12,3 +12,8 @@
 
 //prisma --> db url 
 // wrangler --> accelerate url 
+
+//prisma schema 
+// routes hono 
+//jwt 
+
