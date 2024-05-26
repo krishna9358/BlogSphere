@@ -12,3 +12,9 @@
 // routes hono 
 // added jwt authorization 
 // added middlewares
+
+
+// deploying app    
+1. npx wrangler login (login acount)
+2. npx wrangler whoami
+3. npm run deploy
