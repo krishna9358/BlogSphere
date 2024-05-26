@@ -12,6 +12,9 @@
 // routes hono 
 // added jwt authorization 
 // added middlewares
+// zod validation || common folder and zod validation 
+// zod types
+// publish common folder to npm  and used
 
 
 // deploying app    
