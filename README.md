@@ -76,5 +76,13 @@ To get started with this project, follow these steps:
 // zod types
 // publish common folder to npm  and used
 
+// create react app 
+// create routes 
+// create pages
+// create components
+// backend call, and jwt 
+// local storage 
+
+
 
 
