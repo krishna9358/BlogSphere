@@ -13,6 +13,7 @@
     "@krishna7060/common": "^1.0.0",
     "@radix-ui/react-label": "^2.0.2",
     "@tabler/icons-react": "^3.5.0",
+    "axios": "^1.7.2",
     "clsx": "^2.1.1",
     "framer-motion": "^11.2.6",
     "react": "^18.2.0",

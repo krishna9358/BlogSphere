@@ -1,4 +1,8 @@
+
+import { Link } from "react-router-dom"
+
 export const Auth = () => {
+  
     return <div>
         <div className="flex h-screen w-full items-center justify-center bg-gray-950 px-4 dark:bg-gray-950">
       <div className="w-full max-w-md space-y-6">
@@ -27,12 +31,12 @@ export const Auth = () => {
           >
             Forgot your password?
           </a>
-          <a
+          <Link
             className="inline-block w-full text-center text-sm text-gray-400 underline hover:text-gray-300"
-            href="#"
+            to={"/signup"}
           >
             Don't have an account? Sign up
-          </a>
+          </Link>
           </div>
           
         </div>
