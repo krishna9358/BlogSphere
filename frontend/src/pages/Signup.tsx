@@ -1,7 +1,7 @@
 import { SignupInput } from "@krishna7060/common";
 import axios from "axios";
-import { useState } from "react";
-import { Link,  useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { BACKEND_URL } from "../config";
 
 export function Signup() {
@@ -12,17 +12,26 @@ export function Signup() {
     password : ""
   });
 
+  useEffect(() => {
+    // Redirect user to blog page if they are already logged in
+    const token = localStorage.getItem("token");
+    if (token) {
+      navigate("/blogs");
+    }
+  }, [navigate]);
+
   async function sendRequest(){
-  try{
-    const response = await axios.post(`${BACKEND_URL}/api/v1/user/signup`, postInputs);
-    const jwt = response.data;
-    localStorage.setItem("token", jwt); // .setItem("key", value)
-    navigate("/blog");
-  }catch(error){
-    console.log(error);
-    alert("Something went wrong");
+    try{
+      const response = await axios.post(`${BACKEND_URL}/api/v1/user/signup`, postInputs);
+      const jwt = response.data;
+      localStorage.setItem("token", jwt); // .setItem("key", value)
+      navigate("/blogs");
+    }catch(error){
+      console.log(error);
+      alert("Something went wrong");
+    }
   }
-  }
+
   return <div>
     <div className="flex h-screen w-full items-center justify-center bg-gray-950 px-4 dark:bg-gray-950 ">
       <div className="w-full max-w-md space-y-6 border-2 border-gray-500 p-5 rounded">

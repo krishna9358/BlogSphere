@@ -80,9 +80,13 @@ To get started with this project, follow these steps:
 // create routes 
 // create pages
 // create components
-// backend call, and jwt 
-// local storage 
+// backend call, and jwt  for signup and signnin
+// local storage  jwt when signun and login
 
 
+
+## Bug
+- can view blogs by directly using url 
+- password are not hashed in database. 
 
 
