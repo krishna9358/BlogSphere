@@ -16,21 +16,24 @@ JWT_SECRET: string;
 }
 >();
 
+// Middleware to verify JWT and set user context
 blogRouter.use("/*", async (c, next) => {
   const authHeader = c.req.header('Authorization') || "";
-  const user = await verify(authHeader, c.env.JWT_SECRET);
-  if(user){
-    c.set("userId", user.id as string);  
-   await next();
-  }else{
+  if (!authHeader) {
     c.status(401);
-    return c.json({message: "Unauthorized"});
-  }  
-
-})
+    return c.json({ message: "No token provided" });
+  }
+  try {
+    const user = await verify(authHeader, c.env.JWT_SECRET);
+    c.set("userId", user.id as string);
+    await next();
+  } catch (error) {
+    c.status(401);
+    return c.json({ message: "Unauthorized or invalid token" });
+  }
+});
 
 blogRouter.post('/', async (c) => {
-
     const body = await c.req.json();
     const {success} = createblogInput.safeParse(body);
     if (!success){
