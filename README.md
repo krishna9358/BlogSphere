@@ -1,9 +1,4 @@
 
-
-
-
-
-
 # Project Overview
 
 This project is a comprehensive backend system designed to manage blog content. It is built to be scalable and secure, leveraging cloud technologies and modern development practices.
@@ -82,6 +77,12 @@ To get started with this project, follow these steps:
 // create components
 // backend call, and jwt  for signup and signnin
 // local storage  jwt when signun and login
+// signup sign in page
+// blogs page -> blog component
+// app bar -> login and user logo dashboard
+// fetch all blogs from database using custom hook/recoil 
+// 
+
 
 
 
@@ -90,3 +91,6 @@ To get started with this project, follow these steps:
 - password are not hashed in database. 
 
 
+
+// Note :
+start doing the frontend wala part from starting . Download the files to copy paste and fix the ui/ux for fast work. Backend is clear. 
