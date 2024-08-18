@@ -13,7 +13,7 @@ export const Auth = () => {
         password: ""});
 
     useEffect(() => {
-        const jwt = localStorage.getItem("jwt");
+        const jwt = localStorage.getItem("token");
         if (jwt) {
             navigate("/blogs");
         }
@@ -24,7 +24,7 @@ export const Auth = () => {
       try{
         const response = await axios.post(`${BACKEND_URL}/api/v1/user/signin`, postInputs)
         const jwt = response.data.jwt
-        localStorage.setItem("jwt", jwt)
+        localStorage.setItem("token", jwt)
         navigate("/blogs")
       }catch(err){
         alert("Error while logging in")
@@ -32,7 +32,7 @@ export const Auth = () => {
     }
 
 
-
+//login
     return <div>
         <div className="flex h-screen w-full items-center justify-center bg-gray-950 px-4 dark:bg-gray-950">
       <div className="w-full max-w-md space-y-6">
