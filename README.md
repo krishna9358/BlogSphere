@@ -94,3 +94,5 @@ To get started with this project, follow these steps:
 
 // Note :
 start doing the frontend wala part from starting . Download the files to copy paste and fix the ui/ux for fast work. Backend is clear. 
+
+backend error something something, use postman and debug
